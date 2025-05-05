@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Mon Projet Django</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <div class="text-center mb-3">
+                    <img src="{% static 'githubActions/images/image14.jpg' %}" class="img-circle" alt="Image 2">
+                </div>
+                <ul class="list-group text-center">
+                    <li class="list-group-item"><a href="home.html" class="nav-link">Accueil</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">À propos</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Galerie</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Témoignages</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Équipe</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Événements</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">FAQ</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Politique de confidentialité</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Conditions d'utilisation</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Support</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Partenaires</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Carrières</a></li>
+                    <li class="list-group-item"><a href="#" class="nav-link">Suivez-nous</a></li>
+                </ul>  
+            </div>
+            
+            <style>
+                .sidebar {
+                    background-color: #f8f9fa; /* Couleur de fond de la sidebar */
+                    padding: 15px; /* Espacement interne */
+                    border-radius: 5px; /* Coins arrondis */
+                }
+                .img-circle {
+                    width: 80px; /* Ajustez la taille selon vos besoins */
+                    height: 80px; /* Même taille que la largeur */
+                    border-radius: 50%; /* Forme circulaire */
+                    object-fit: cover; /* Pour s'assurer que l'image remplit le cercle */
+                    border: 5px solid #007bff; /* Bordure autour de l'image */
+                }
+                .list-group {
+                    padding: 0; /* Supprime le remplissage par défaut */
+                }
+                .list-group-item {
+                    border: none; /* Pas de bordure sur les éléments de la liste */
+                    text-align: center; /* Centre le texte dans chaque élément */
+                }
+                .nav-link {
+                    color: #007bff; /* Couleur des liens */
+                    text-decoration: none; /* Pas de soulignement */
+                }
+                .nav-link:hover {
+                    color: #0056b3; /* Couleur au survol */
+                }
+            </style>
+
+            <!-- Contenu Principal -->
+            <div class="col-md-9">
+                <div class="container mt-4">
+                    <h2 style="color: rgb(22, 128, 128);">Le jour de Mariage de mon frère Tresor</h2>
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <img src="{% static 'githubActions/images/image1.jpg' %}" class="img-fluid" alt="Image 1">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="{% static 'githubActions/images/image2.jpg' %}" class="img-fluid" alt="Image 2">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="{% static 'githubActions/images/image3.jpg' %}" class="img-fluid" alt="Image 3">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="{% static 'githubActions/images/image4.jpg' %}" class="img-fluid" alt="Image 4">
+                        </div>
+                    </div>
+                    <h3 style="text-align: center; margin-top: 20px; color: rgb(22, 128, 128);">Identification des Photos de Mariage</h3>
+                </div>
+                
+                <div class="container mt-4">
+                    <div class="row text-center" id="story-container">
+                        <div class="col-md-4 story-column">
+                        <div class="story-card p-4 border rounded shadow-sm" onclick="expandCard(this)">
+                            <h6>Histoire de Tresor</h6>
+                            <p>Tresor a toujours rêvé d'un mariage parfait. Sa rencontre avec sa partenaire a été un coup de foudre, un moment qui a changé sa vie. Leur amour a grandi au fil des années, chaque sourire et chaque regard renforçant leur lien indéfectible. Le jour de leur mariage, entourés de leurs proches, ils ont célébré leur amour avec une joie éclatante et des émotions profondes, marquant le début d'une aventure commune pleine de promesses.</p>
+                        </div>
+                        </div>
+                        <div class="col-md-4 story-column">
+                            <div class="story-card p-4 border rounded shadow-sm" onclick="expandCard(this)">
+                                <h6>L'amour de Pia pour Tresor</h6>
+                                <p>Pia, la partenaire de cœur de Tresor, a toujours cru en leur rêve commun d'un mariage parfait. Sa rencontre avec lui a été un moment marquant, illuminant son monde. Leur amour n'a cessé de grandir, nourri par des souvenirs précieux et des rires partagés. Avec son sens inné de la décoration, elle a créé un cadre magique pour leur journée spéciale, transformant chaque détail en une belle expression de leur amour. Ensemble, ils ont célébré leur union entourés de leurs proches, partageant une joie immense et des émotions inoubliables.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 story-column">
+                            <div class="story-card p-4 border rounded shadow-sm" onclick="expandCard(this)">
+                                <h6>Histoire d'amour</h6>
+                                <p>L'amour entre Tresor et Pia est une belle histoire à raconter. Ils se sont rencontrés lors d'un événement commun et ont rapidement réalisé que leur connexion était spéciale. Leur parcours, riche en aventures et défis, les a conduits à ce jour mémorable, symbolisant le début d'une nouvelle étape de leur vie ensemble. Chaque étape de leur voyage a été marquée par une complicité grandissante, les rendant plus forts et plus unis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <style>
+                    .story-card {
+                        background-color: #f8f9fa; /* Couleur de fond légère */
+                        border: 1px solid #dee2e6; /* Bordure légère */
+                        transition: transform 0.2s; /* Animation au survol */
+                        cursor: pointer; /* Pointeur pour indiquer que c'est cliquable */
+                    }
+                    .story-card:hover {
+                        transform: scale(1.05); /* Agrandissement au survol */
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+                    }
+                    h6 {
+                        color: #007bff; /* Couleur du texte des titres */
+                        font-weight: bold; /* Met en gras le titre */
+                    }
+                </style>
+                
+                <script>
+                    function expandCard(element) {
+                        // Récupérer le conteneur principal
+                        const container = document.getElementById('story-container');
+                        
+                        // Masquer toutes les colonnes sauf celle cliquée
+                        const columns = container.querySelectorAll('.story-column');
+                        columns.forEach(col => {
+                            if (col !== element.parentElement) {
+                                col.style.display = 'none'; // Cacher les autres colonnes
+                            } else {
+                                col.classList.remove('col-md-4');
+                                col.classList.add('col-md-12'); // Agrandir la colonne cliquée
+                            }
+                        });
+                    }
+                </script>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light text-center">
+        <div class="container">
+            <span class="text-muted">© 2023 MonSite</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
