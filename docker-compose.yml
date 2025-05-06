@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  web:
+    build: .  # Construit l'image à partir du Dockerfile dans le répertoire courant
+    command: python manage.py runserver 0.0.0.0:8000  # Commande pour lancer l'application
+    volumes:
+      - .:/app  # Monte le répertoire courant dans le conteneur (pour le développement)
+    ports:
+      - "8000:8000"  # Expose le port 8000 du conteneur sur le port 8000 de l'hôte
+    

@@ -1,0 +1,10 @@
+db.sqlite3
+action/
+settings_local.py
+*.pyc
+__pycache__/
+docker-compose.yml
+githubActions/
+staticfiles/
+CI-CD-githb-dockerhb/
+.gitignore

@@ -1,5 +1,0 @@
-db.sqlite3
-action/
-settings_local.py
-*.pyc
-__pycache__/
